@@ -1,0 +1,91 @@
+[DEBUG|worklog|L88] 2024-10-02T12:40:56-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L32] 2024-10-02T12:40:56-0500: Directory ~/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L32] 2024-10-02T12:40:56-0500: Directory ~/Documents/worklogger created
+[DEBUG|worklog|L32] 2024-10-02T12:40:56-0500: Directory ~/Documents/GitHub/worklogger created
+[INFO|worklog|L64] 2024-10-02T12:40:56-0500: Written paces worklog to ~/Documents/GitHub/worklogger/Output
+[INFO|worklog|L64] 2024-10-02T12:40:56-0500: Written paces worklog to ~/Documents/worklogger
+[DEBUG|worklog|L88] 2024-10-02T12:48:58-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L32] 2024-10-02T12:48:58-0500: Directory /Users/cole/Documents/GitHub/worklogger/src/~/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L32] 2024-10-02T12:48:58-0500: Directory /Users/cole/Documents/GitHub/worklogger/src/~/Documents/worklogger created
+[DEBUG|worklog|L32] 2024-10-02T12:48:58-0500: Directory /Users/cole/Documents/GitHub/worklogger/src/~/Documents/GitHub/worklogger created
+[INFO|worklog|L64] 2024-10-02T12:48:58-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/src/~/Documents/GitHub/worklogger/Output
+[INFO|worklog|L64] 2024-10-02T12:48:58-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/src/~/Documents/worklogger
+[DEBUG|worklog|L88] 2024-10-02T12:49:33-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T12:58:15-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:00:06-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:01:34-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:05:12-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:13:47-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:15:57-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L87] 2024-10-02T13:19:16-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L31] 2024-10-02T13:19:16-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L31] 2024-10-02T13:19:16-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L31] 2024-10-02T13:19:16-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[INFO|worklog|L63] 2024-10-02T13:19:16-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L63] 2024-10-02T13:19:16-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L89] 2024-10-02T13:45:28-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L32] 2024-10-02T13:45:28-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L32] 2024-10-02T13:45:28-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L32] 2024-10-02T13:45:28-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[ERROR|worklog|L125] 2024-10-02T13:45:28-0500: [Errno 17] File exists: '/Users/cole/Documents/GitHub/worklogger/Output/great company.txt'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/worklog.py", line 120, in <module>
+    with open(filepath, 'x'):
+         ^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/Users/cole/Documents/GitHub/worklogger/Output/great company.txt'
+[INFO|worklog|L65] 2024-10-02T13:45:28-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L65] 2024-10-02T13:45:28-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L89] 2024-10-02T13:47:50-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L32] 2024-10-02T13:47:50-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L32] 2024-10-02T13:47:50-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L32] 2024-10-02T13:47:50-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[ERROR|worklog|L125] 2024-10-02T13:47:50-0500: [Errno 17] File exists: '/Users/cole/Documents/GitHub/worklogger/Output/great company.txt'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/worklog.py", line 120, in <module>
+    with open(filepath, 'x'):
+         ^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/Users/cole/Documents/GitHub/worklogger/Output/great company.txt'
+[INFO|worklog|L65] 2024-10-02T13:47:50-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L65] 2024-10-02T13:47:50-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L89] 2024-10-02T13:55:02-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L32] 2024-10-02T13:55:02-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L32] 2024-10-02T13:55:02-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L32] 2024-10-02T13:55:02-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[INFO|worklog|L65] 2024-10-02T13:55:02-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L65] 2024-10-02T13:55:02-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L90] 2024-10-02T14:02:05-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L33] 2024-10-02T14:02:05-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L33] 2024-10-02T14:02:05-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L33] 2024-10-02T14:02:05-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[INFO|worklog|L66] 2024-10-02T14:02:05-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L66] 2024-10-02T14:02:05-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L90] 2024-10-02T14:14:03-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L33] 2024-10-02T14:14:03-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L33] 2024-10-02T14:14:03-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L33] 2024-10-02T14:14:03-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[INFO|worklog|L66] 2024-10-02T14:14:03-0500: Written PACES worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L66] 2024-10-02T14:14:03-0500: Written PACES worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L92] 2024-10-02T14:16:30-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[DEBUG|worklog|L33] 2024-10-02T14:16:30-0500: Directory /Users/cole/Documents/GitHub/worklogger/Output created
+[DEBUG|worklog|L33] 2024-10-02T14:16:30-0500: Directory /Users/cole/Documents/worklogger created
+[DEBUG|worklog|L33] 2024-10-02T14:16:30-0500: Directory /Users/cole/Documents/GitHub/worklogger created
+[INFO|worklog|L68] 2024-10-02T14:16:30-0500: Written PACES worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L68] 2024-10-02T14:16:30-0500: Written PACES worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L92] 2024-10-02T14:20:54-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L68] 2024-10-02T14:20:54-0500: Written PACES worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L68] 2024-10-02T14:20:54-0500: Written PACES worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L93] 2024-10-02T14:25:12-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L69] 2024-10-02T14:25:12-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L69] 2024-10-02T14:25:12-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L93] 2024-10-02T14:27:30-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L69] 2024-10-02T14:27:30-0500: Written Paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L69] 2024-10-02T14:27:30-0500: Written Paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L96] 2024-10-02T14:32:25-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L72] 2024-10-02T14:32:25-0500: Written Paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L72] 2024-10-02T14:32:25-0500: Written Paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L96] 2024-10-02T14:33:42-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L72] 2024-10-02T14:33:42-0500: Written Paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L72] 2024-10-02T14:33:42-0500: Written Paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L96] 2024-10-02T14:35:11-0500: Using user config file in /Users/cole/Documents/GitHub/worklogger/src/../.workloggerconfig.json
+[INFO|worklog|L72] 2024-10-02T14:35:11-0500: Written Paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|worklog|L72] 2024-10-02T14:35:11-0500: Written Paces worklog to /Users/cole/Documents/worklogger
