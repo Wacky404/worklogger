@@ -1,11 +1,17 @@
-from utils.log_util import logger
-from utils import paths_util as pu
+#!/opt/homebrew/bin/python3
+"""
+IMPLEMENTATION FILE FOR WORKLOGGER
+author: Wacky404
+email: wacky404@dev.com
+"""
 
-import os.path as osp
-import os
+from log_util_worklogger import logger
 from datetime import timezone
-import datetime
 import csv
+import datetime
+import os
+import os.path as osp
+import paths_util as pu
 
 
 def configure(dir_list=None):

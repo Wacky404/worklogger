@@ -1,17 +1,22 @@
-from pathlib import Path
-from utils.log_util import logger, setup_logging
+#!/opt/homebrew/bin/python3
+"""
+MAIN FILE FOR WORKLOGGER
+author: Wacky404
+email: wacky404@dev.com
+"""
 
-from args_worklogger import parser
-from funcs_worklogger import configure, add_log, arg_convert
-from utils import paths_util as pu
-import logging
-
-import os.path as osp
-import os
-import sys
-import json
-from datetime import timezone
 import datetime
+from datetime import timezone
+import json
+import sys
+import os
+import os.path as osp
+import logging
+import paths_util as pu
+from funcs_worklogger import configure, add_log, arg_convert
+from args_worklogger import parser
+from pathlib import Path
+from log_util_worklogger import logger, setup_logging
 
 
 SAVEPATH: Path | str

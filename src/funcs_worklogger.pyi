@@ -1,3 +1,9 @@
+"""
+INTERFACE FILE FOR WORKLOGGER
+author: Wacky404
+email: wacky404@dev.com
+"""
+
 from argparse import Namespace
 from pathlib import Path
 

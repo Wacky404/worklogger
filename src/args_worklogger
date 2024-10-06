@@ -1,8 +1,10 @@
+#!/opt/homebrew/bin/python3
 """
 ARGUMENTS FILE FOR WORKLOGGER
 author: Wacky404
 email: wacky404@dev.com
 """
+
 import argparse
 
 parser = argparse.ArgumentParser(
