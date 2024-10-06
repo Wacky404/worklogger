@@ -2,6 +2,7 @@ from pathlib import Path
 from utils.log_util import logger, setup_logging
 
 from args_worklogger import parser
+from funcs_worklogger import configure, add_log, arg_convert
 from utils import paths_util as pu
 import logging
 
@@ -12,6 +13,7 @@ import json
 from datetime import timezone
 import datetime
 
+
 SAVEPATH: Path | str
 BACKUPPATH: Path | str
 CONFIGPATH: Path | str
@@ -19,62 +21,14 @@ CONFIGPATH: Path | str
 formats: dict = {
     "TEXT": '.txt',
     "JSON": '.json',
+    "CSV": '.csv'
 }
 
 # creates a NameSpace of arguments that were made
 args = parser.parse_args()
 
-
-def configure(dir_list: list | None = None) -> None:
-    if dir_list is not None:
-        for directory in dir_list:
-            try:
-                os.makedirs(name=directory, exist_ok=True)
-                logger.debug(f"Directory {directory} created")
-
-            except FileExistsError as e:
-                logger.exception(f"An exception of type {type(e).__name__} occurred. "
-                                 f"Details: This is okay, output will save in existing {directory}.")
-    else:
-        for directory in [pu.output_dir, pu.log_dir]:
-            try:
-                os.makedirs(name=directory, exist_ok=True)
-                logger.debug(f"Directory {directory} created")
-
-            except FileExistsError as e:
-                logger.exception(f"An exception of type {type(e).__name__} occurred. "
-                                 f"Details: This is okay, output will save in existing {directory}.")
-
-
-def add_log(job=args.job, proj=args.project, loc=args.location, time=args.time, start=args.start, end=args.end,
-            desc=args.message, file_format=None) -> None:
-    # TODO: Add in functionality to convert project input arg to key value pair from settings
-    func_args = locals()
-    dt = datetime.datetime.now(timezone.utc)
-    log_str = f"{dt.strftime("%Y-%m-%dT%H:%M:%S%Z")} "
-    for key, val in func_args.items():
-        if key == 'time' and val is not None:
-            log_str += f"{key}:{val}hrs "
-        elif key == 'desc' and val is not None:
-            log_str += f"{key}:'{val}'"
-        elif val is not None and key != 'file_format':
-            log_str += f"{key}:{val} "
-
-    job_upper = str(job).upper()
-    for path in [SAVEPATH, BACKUPPATH]:
-        if file_format != None:
-            chosen_job = osp.join(path, f"{job_upper}{file_format}")
-        else:
-            chosen_job = osp.join(path, f"{job_upper}.txt")
-
-        with open(chosen_job, 'a') as fd:
-            fd.write(f"{log_str}\n")
-
-        logger.info(f"Written {func_args['job']} worklog to {path}")
-
-
 if args.configure:
-    configure()
+    configure(dir_list=None)
     logger.info("Configuration completed.")
     sys.exit()
 
@@ -96,7 +50,7 @@ if osp.exists(osp.join(os.getcwd(), os.pardir)):
     else:
         logger.debug(f"Using user config file in {str(dotfile[0])}")
 
-settings = None
+settings: dict | None = None
 if dotfile is not None:
     with open(dotfile[0], 'r') as fd:
         try:
@@ -120,9 +74,23 @@ if settings is not None:
         configure(dir_list=dir_list)
 
 
-jobs_names = [str(j['name']).upper() for j in settings['jobs']]
+jname_proj: dict[str, dict] = {}
+if settings is not None:
+    for j in settings['jobs']:
+        jname_proj[str(j['name']).upper()] = j['projects'][0]
+    logger.debug(f"{jname_proj}")
+
+    for name, projs in jname_proj.items():
+        projs_new: dict[str, str] = {}
+        for key, proj in projs.items():
+            projs_new[str(key).upper()] = proj
+        projs = projs_new
+
+        jname_proj[name] = projs
+    logger.debug(f"{jname_proj}")
+
 try:
-    for name in jobs_names:
+    for name in jname_proj.keys():
         filepath = osp.join(SAVEPATH, f"{name}.txt")
         filepath_backup = osp.join(BACKUPPATH, f"{name}.txt")
         if not osp.exists(filepath):
@@ -135,6 +103,10 @@ except Exception as e:
     logger.exception(str(e))
 
 if settings is not None:
-    add_log(file_format=formats[str(settings['fileformat']).upper()])
+    add_log(file_format=formats[str(
+        settings['fileformat']).upper()], proj_settings=jname_proj, savepath=SAVEPATH, backuppath=BACKUPPATH, job=args.job, proj=args.project,
+        loc=args.location, time=args.time, start=args.start, end=args.end, message=args.message)
 else:
-    add_log()
+    add_log(file_format=None, proj_settings=None,
+            savepath=SAVEPATH, backuppath=BACKUPPATH, job=args.job, proj=args.project,
+            loc=args.location, time=args.time, start=args.start, end=args.end, message=args.message)

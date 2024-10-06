@@ -5,8 +5,6 @@ email: wacky404@dev.com
 """
 import argparse
 
-# worklog -j paces -p interconnection -l university -t 2 -s 12:00 am -e 1:00 PM
-
 parser = argparse.ArgumentParser(
     prog='WorkLogger',
     description="Log time efficiently, accurately, and reliably "
@@ -40,8 +38,7 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '-j',
-    '--job',
+    'job',
     action='store',
     help='Add a job for the work done, to be logged with your insertion',
 )
