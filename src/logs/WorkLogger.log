@@ -186,3 +186,463 @@ FileExistsError: [Errno 17] File exists: '/Users/cole/Documents/GitHub/worklogge
 [DEBUG|funcs_worklogger|L42] 2024-10-05T21:18:20-0500: Parse: UASYS, .txt
 [DEBUG|funcs_worklogger|L118] 2024-10-05T21:18:20-0500: Couldn't specified projects for uasys in config.
 [INFO|funcs_worklogger|L140] 2024-10-05T21:18:20-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L51] 2024-10-05T22:42:33-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T22:42:33-0500: Could not find your config file, using defaults...
+[DEBUG|worklog|L51] 2024-10-05T22:49:38-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T22:49:38-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T22:49:38-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|worklog|L51] 2024-10-05T22:56:14-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T22:56:14-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T22:56:14-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|worklog|L51] 2024-10-05T22:59:23-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T22:59:23-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T22:59:23-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|worklog|L51] 2024-10-05T23:02:05-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T23:02:05-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:02:05-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[ERROR|funcs_worklogger|L146] 2024-10-05T23:02:05-0500: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/funcs_worklogger.py", line 143, in add_log
+    with open(chosen_job, 'a') as fd:
+         ^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+[INFO|funcs_worklogger|L148] 2024-10-05T23:02:05-0500: Written not so great company worklog to /Users/cole/..
+[DEBUG|worklog|L51] 2024-10-05T23:02:55-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T23:02:55-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:02:55-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[ERROR|funcs_worklogger|L146] 2024-10-05T23:02:55-0500: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/funcs_worklogger.py", line 143, in add_log
+    with open(chosen_job, 'a') as fd:
+         ^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+[INFO|funcs_worklogger|L148] 2024-10-05T23:02:55-0500: Written not so great company worklog to /Users/cole/..
+[DEBUG|worklog|L51] 2024-10-05T23:05:05-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T23:05:05-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:05:05-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[ERROR|funcs_worklogger|L146] 2024-10-05T23:05:05-0500: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/funcs_worklogger.py", line 143, in add_log
+    with open(chosen_job, 'a') as fd:
+         ^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMPANY.txt'
+[INFO|funcs_worklogger|L148] 2024-10-05T23:05:05-0500: Written not so great company worklog to /Users/cole/..
+[DEBUG|worklog|L51] 2024-10-05T23:06:04-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T23:06:04-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:06:04-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[INFO|funcs_worklogger|L148] 2024-10-05T23:06:04-0500: Written not so great company worklog to /Users/cole/Documents/WorkLogger
+[DEBUG|worklog|L51] 2024-10-05T23:07:13-0500: Found dotfile(s): []
+[DEBUG|worklog|L59] 2024-10-05T23:07:13-0500: Could not find your config file, using defaults...
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:07:13-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[INFO|funcs_worklogger|L148] 2024-10-05T23:07:13-0500: Written not so great company worklog to /Users/cole/Documents
+[INFO|funcs_worklogger|L148] 2024-10-05T23:07:13-0500: Written not so great company worklog to /Users/cole/Documents/WorkLogger
+[DEBUG|worklog|L51] 2024-10-05T23:12:24-0500: Found dotfile(s): [PosixPath('/Users/cole/.workloggerconfig.json')]
+[DEBUG|worklog|L57] 2024-10-05T23:12:24-0500: Using user config file in /Users/cole/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L22] 2024-10-05T23:12:24-0500: Directory /Users/cole/~ created
+[DEBUG|worklog|L94] 2024-10-05T23:12:24-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L103] 2024-10-05T23:12:24-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:12:24-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[INFO|funcs_worklogger|L148] 2024-10-05T23:12:52-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L148] 2024-10-05T23:12:52-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L51] 2024-10-05T23:13:03-0500: Found dotfile(s): [PosixPath('/Users/cole/.workloggerconfig.json')]
+[DEBUG|worklog|L57] 2024-10-05T23:13:03-0500: Using user config file in /Users/cole/.workloggerconfig.json
+[DEBUG|worklog|L94] 2024-10-05T23:13:03-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L103] 2024-10-05T23:13:03-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:13:03-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[INFO|funcs_worklogger|L148] 2024-10-05T23:13:03-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L148] 2024-10-05T23:13:03-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L51] 2024-10-05T23:16:04-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L57] 2024-10-05T23:16:04-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L94] 2024-10-05T23:16:04-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L103] 2024-10-05T23:16:04-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-05T23:16:04-0500: Parsed: NOT SO GREAT COMPANY, .txt
+[INFO|funcs_worklogger|L148] 2024-10-05T23:16:04-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L148] 2024-10-05T23:16:04-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L51] 2024-10-06T11:04:27-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L57] 2024-10-06T11:04:27-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L50] 2024-10-06T11:06:00-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:06:00-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:06:00-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:06:00-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:06:00-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:12:50-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:12:50-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:12:50-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:12:50-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:12:50-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:18:07-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:18:07-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:18:07-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:18:07-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:18:07-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:20:40-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:20:40-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:20:40-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:20:40-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:20:40-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L164] 2024-10-06T11:20:40-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L164] 2024-10-06T11:20:40-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T11:22:33-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:22:33-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:22:33-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:22:33-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:22:33-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L164] 2024-10-06T11:22:33-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[DEBUG|worklog|L50] 2024-10-06T11:23:48-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:23:48-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:23:48-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:23:48-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:23:48-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:24:24-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:24:24-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:24:24-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:24:24-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:24:24-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L165] 2024-10-06T11:24:24-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[DEBUG|worklog|L50] 2024-10-06T11:35:32-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:35:32-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:35:32-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:35:32-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:35:32-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:35:58-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:35:58-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:35:58-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:35:58-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:35:58-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T11:36:39-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:36:39-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:36:39-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:36:39-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:36:39-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L170] 2024-10-06T11:36:39-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L170] 2024-10-06T11:36:39-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T11:38:24-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T11:38:24-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T11:38:24-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T11:38:24-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T11:38:24-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L170] 2024-10-06T11:38:24-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L170] 2024-10-06T11:38:24-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:02:57-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:02:57-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:02:57-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:02:57-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T13:02:57-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L180] 2024-10-06T13:02:57-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L180] 2024-10-06T13:02:57-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:06:36-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:06:36-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:06:36-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:06:36-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T13:06:36-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L181] 2024-10-06T13:06:36-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L181] 2024-10-06T13:06:36-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:07:33-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:07:33-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:07:33-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:07:33-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L48] 2024-10-06T13:07:33-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:07:33-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:07:33-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:10:02-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:10:02-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:10:02-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:10:02-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:10:02-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:10:02-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:10:02-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:12:31-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:12:31-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:12:31-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:12:31-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:12:31-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:12:31-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:12:31-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:13:31-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:13:31-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:13:31-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:13:31-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:13:31-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:13:31-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:13:31-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:13:35-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:13:35-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:13:35-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:13:35-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:13:35-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:13:35-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:13:35-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:14:02-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:14:02-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:14:02-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:14:02-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:14:02-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:14:02-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:14:02-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:14:25-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:14:25-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:14:25-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:14:25-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:14:25-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:14:25-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:14:25-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:17:54-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:17:54-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:17:54-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:17:54-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:17:54-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:17:54-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:17:54-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:17:59-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:17:59-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:17:59-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:17:59-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:17:59-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:17:59-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:17:59-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:18:10-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:18:10-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:18:10-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:18:10-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:18:10-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L182] 2024-10-06T13:18:10-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L182] 2024-10-06T13:18:10-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:27:58-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:27:58-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:27:58-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:27:58-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:27:58-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:27:58-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:27:58-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:28:41-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:28:41-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:28:41-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:28:41-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:28:41-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L162] 2024-10-06T13:28:41-0500: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L193] 2024-10-06T13:28:41-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:28:41-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:31:08-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:31:08-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:31:08-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:31:08-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:31:08-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:31:19-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:31:19-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:32:34-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:32:34-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:32:34-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:32:34-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:32:34-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:34-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:34-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:32:44-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:32:44-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:32:44-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:32:44-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:32:44-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L162] 2024-10-06T13:32:44-0500: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:44-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:44-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:32:48-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:32:48-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:32:48-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:32:48-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:32:48-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L162] 2024-10-06T13:32:48-0500: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:48-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:32:48-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:33:01-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:33:01-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:33:01-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:33:01-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:33:01-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:01-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:01-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:33:12-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:33:12-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:33:12-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:33:12-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:33:12-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:12-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:12-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:33:18-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:33:18-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:33:18-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:33:18-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:33:18-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:18-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L193] 2024-10-06T13:33:18-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:50:17-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:50:17-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:50:17-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:50:17-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:50:17-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L174] 2024-10-06T13:50:17-0500: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:17-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:17-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:50:23-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:50:23-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:50:23-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:50:23-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:50:23-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:23-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:23-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:50:33-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:50:33-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:50:33-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:50:33-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:50:33-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L174] 2024-10-06T13:50:33-0500: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:33-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L212] 2024-10-06T13:50:33-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T13:52:04-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:52:04-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:52:04-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:52:04-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:52:04-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T13:54:00-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:54:00-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:54:00-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:54:00-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:54:00-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T13:54:28-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:54:28-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:54:28-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:54:28-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:54:28-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T13:56:28-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T13:56:28-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T13:56:28-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T13:56:28-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T13:56:28-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L210] 2024-10-06T13:56:31-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-06T13:56:31-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T14:02:51-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T14:02:51-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T14:02:51-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T14:02:51-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T14:02:51-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L50] 2024-10-06T14:29:53-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T14:29:53-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T14:29:53-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T14:29:53-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T14:29:53-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L210] 2024-10-06T14:29:56-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-06T14:29:56-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-06T14:32:20-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-06T14:32:20-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-06T14:32:20-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-06T14:32:20-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-06T14:32:20-0500: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L210] 2024-10-06T14:32:20-0500: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-06T14:32:20-0500: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-11T15:01:19-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-11T15:01:19-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-11T15:01:19-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}}
+[DEBUG|worklog|L101] 2024-10-11T15:01:19-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-11T15:01:19-0500: Parsed: PACES, .csv
+[DEBUG|worklog|L50] 2024-10-11T15:04:33-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-11T15:04:33-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-11T15:04:33-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-11T15:04:33-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-11T15:04:33-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-11T15:04:33-0500: Job: Paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-11T15:04:33-0500: Written Paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-11T15:04:33-0500: Written Paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-14T13:45:41-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-14T13:45:41-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-14T13:45:41-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-14T13:45:41-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-14T13:45:41-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-14T13:45:41-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-14T13:45:41-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-14T13:45:41-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-14T16:47:32-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-14T16:47:32-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-14T16:47:32-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-14T16:47:32-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-14T16:47:32-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-14T16:47:32-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-14T16:47:32-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-14T16:47:32-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-15T14:21:46-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-15T14:21:46-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-15T14:21:46-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-15T14:21:46-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-15T14:21:46-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-15T14:21:46-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-15T14:21:46-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-15T14:21:46-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-15T15:36:22-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-15T15:36:22-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-15T15:36:22-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-15T15:36:22-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-15T15:36:22-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-15T15:36:22-0500: Job: paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-15T15:36:22-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-15T15:36:22-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-15T17:12:01-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-15T17:12:01-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-15T17:12:01-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-15T17:12:01-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-15T17:12:01-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-15T17:12:01-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-15T17:12:01-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-15T17:12:01-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-15T17:13:14-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-15T17:13:14-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-15T17:13:14-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-15T17:13:14-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-15T17:13:14-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-15T17:13:14-0500: Job: paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-15T17:13:14-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-15T17:13:14-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-16T14:04:19-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-16T14:04:19-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-16T14:04:19-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-16T14:04:19-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-16T14:04:19-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-16T14:04:19-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-16T14:04:19-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-16T14:04:19-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-16T15:14:24-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-16T15:14:24-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-16T15:14:24-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-16T15:14:24-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-16T15:14:24-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-16T15:14:24-0500: Job: paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-16T15:14:24-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-16T15:14:24-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-16T16:05:17-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-16T16:05:17-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-16T16:05:17-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-16T16:05:17-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-16T16:05:17-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-16T16:05:17-0500: Job: paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-16T16:05:17-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-16T16:05:17-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-16T16:10:00-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-16T16:10:00-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-16T16:10:00-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-16T16:10:00-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-16T16:10:00-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-16T16:10:00-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-16T16:10:00-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-16T16:10:00-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-16T18:28:56-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-16T18:28:56-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-16T18:28:56-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-16T18:28:56-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-16T18:28:56-0500: Parsed: PACES, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-16T18:28:56-0500: Job: paces; Projects: {'INTERCONNECTION': 'InterConnection Queue'}
+[INFO|funcs_worklogger|L210] 2024-10-16T18:28:56-0500: Written paces worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-16T18:28:56-0500: Written paces worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-10-17T16:52:45-0500: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-10-17T16:52:45-0500: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-10-17T16:52:45-0500: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything'}, 'PACES': {'Interconnection': 'InterConnection Queue'}}
+[DEBUG|worklog|L101] 2024-10-17T16:52:45-0500: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}}
+[DEBUG|funcs_worklogger|L49] 2024-10-17T16:52:45-0500: Parsed: UASYS, .csv
+[DEBUG|funcs_worklogger|L172] 2024-10-17T16:52:45-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
+[INFO|funcs_worklogger|L210] 2024-10-17T16:52:45-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L210] 2024-10-17T16:52:45-0500: Written uasys worklog to /Users/cole/Documents/worklogger

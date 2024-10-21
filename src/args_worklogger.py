@@ -49,7 +49,7 @@ parser.add_argument(
     '-p',
     '--project',
     action='store',
-    help='',
+    help='Add a project to for the work done, if in your config uses the value of the key inplace.',
 )
 
 parser.add_argument(
@@ -63,21 +63,22 @@ parser.add_argument(
     '-t',
     '--time',
     action='store',
-    default=0
+    default=0,
+    help='Recorded in the unit of hours. Example: 0.5 is 30 minutes, recorded as 0.5hrs'
 )
 
 parser.add_argument(
     '-s',
     '--start',
     action='store',
-    help='Add a start time for the work done, to be logged with your insertion',
+    help='Add a start time for the work done, to be logged with your insertion. Use <now> for current time',
 )
 
 parser.add_argument(
     '-e',
     '--end',
     action='store',
-    help='Add a end time for the work done, to be logged with your insertion',
+    help='Add a end time for the work done, to be logged with your insertion. Use <now> for current time',
 )
 
 parser.add_argument(

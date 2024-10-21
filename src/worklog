@@ -12,7 +12,7 @@ import sys
 import os
 import os.path as osp
 import logging
-import paths_util as pu
+import paths_util_worklogger as pu
 from funcs_worklogger import configure, add_log, arg_convert
 from args_worklogger import parser
 from pathlib import Path
@@ -21,7 +21,6 @@ from log_util_worklogger import logger, setup_logging
 
 SAVEPATH: Path | str
 BACKUPPATH: Path | str
-CONFIGPATH: Path | str
 
 formats: dict = {
     "TEXT": '.txt',
@@ -46,14 +45,19 @@ else:
 
 dotfile: list | None = None
 if osp.exists(osp.join(os.getcwd(), os.pardir)):
-    dotfile = list(Path(osp.join(os.getcwd(), os.pardir)).glob(
+    dotfile = list(Path(osp.join(osp.expanduser('~'), ".config")).glob(
         '**/*.workloggerconfig.json'))
+    logger.debug(f"Found dotfile(s): {dotfile}")
     if len(dotfile) > 1:
         logger.error(
             f"You have {len(dotfile)} config files, using defaults...")
         dotfile = None
-    else:
+    elif len(dotfile) == 1:
         logger.debug(f"Using user config file in {str(dotfile[0])}")
+    elif len(dotfile) == 0:
+        logger.debug(f"Could not find your config file, using defaults...")
+        dotfile = None
+
 
 settings: dict | None = None
 if dotfile is not None:
@@ -69,14 +73,16 @@ if dotfile is not None:
 if settings is not None:
     SAVEPATH = Path(osp.join(osp.expanduser("~"), settings['savepath']))
     BACKUPPATH = Path(osp.join(osp.expanduser("~"), settings['backuppath']))
-    CONFIGPATH = Path(osp.join(osp.expanduser("~"), settings['configpath']))
     numeric_loglevel_settings = getattr(
         logging, str(settings['loglvl']).upper())
     setup_logging(numeric_loglevel_settings)
     dir_list: list = [d for d in [
-        SAVEPATH, BACKUPPATH, CONFIGPATH] if not osp.exists(d)]
+        SAVEPATH, BACKUPPATH] if not osp.exists(d)]
     if len(dir_list) > 0:
         configure(dir_list=dir_list)
+else:
+    SAVEPATH = Path(osp.join(osp.expanduser("~"), "Documents"))
+    BACKUPPATH = Path(osp.join(osp.expanduser("~"), "Documents", "worklogger"))
 
 
 jname_proj: dict[str, dict] = {}
@@ -93,6 +99,33 @@ if settings is not None:
 
         jname_proj[name] = projs
     logger.debug(f"{jname_proj}")
+
+    try:
+        filepath = osp.join(SAVEPATH, f"{str(args.job).upper()}{formats[str(
+            settings['fileformat']).upper()]}")
+        filepath_backup = osp.join(BACKUPPATH, f"{str(args.job).upper()}{formats[str(
+            settings['fileformat']).upper()]}")
+        if not osp.exists(filepath):
+            with open(filepath, 'x'):
+                pass
+        if not osp.exists(filepath):
+            with open(filepath_backup, 'x'):
+                pass
+    except Exception as e:
+        logger.exception(str(e))
+
+else:
+    try:
+        filepath = osp.join(SAVEPATH, f"{str(args.job).upper()}.txt")
+        filepath_backup = osp.join(BACKUPPATH, f"{str(args.job).upper()}.txt")
+        if not osp.exists(filepath):
+            with open(filepath, 'x'):
+                pass
+        if not osp.exists(filepath):
+            with open(filepath_backup, 'x'):
+                pass
+    except Exception as e:
+        logger.exception(str(e))
 
 try:
     for name in jname_proj.keys():
