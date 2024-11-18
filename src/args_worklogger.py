@@ -5,6 +5,7 @@ author: Wacky404
 email: wacky404@dev.com
 """
 
+from pathlib import Path
 import argparse
 
 parser = argparse.ArgumentParser(
@@ -12,6 +13,11 @@ parser = argparse.ArgumentParser(
     description="Log time efficiently, accurately, and reliably "
                 "directly from the terminal you work in.",
 )
+
+subparsers = parser.add_subparsers()
+
+parser_email = subparsers.add_parser(
+    'email', help='Send an email of your worklog(s)')
 
 parser.add_argument(
     '-c',
@@ -86,4 +92,29 @@ parser.add_argument(
     '--message',
     action='store',
     help='Add a message to accompany your worklog entry'
+)
+
+# Email Functionality
+parser_email.add_argument(
+    '-s',
+    '--sender',
+    action='store',
+    help='whom will be sending the email, if email is provided in config this flag does not need to be used'
+)
+
+parser_email.add_argument(
+    '-r',
+    '--recipient',
+    required=True,
+    action='store',
+    help='whom will be recieving the email'
+)
+
+parser_email.add_argument(
+    '-p',
+    '--path',
+    nargs='+',
+    action='store',
+    required=True,
+    help='path(s) to file or directory you want to email'
 )

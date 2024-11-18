@@ -36,14 +36,6 @@ def configure(dir_list=None):
                                  f"Details: This is okay, output will save in existing {directory}.")
 
 
-def arg_convert(arguments: dict):
-    args: dict = {}
-    for key, val in arguments.items():
-        args[key] = val
-
-    return args
-
-
 def parse(filepath=None):
     filename, ext = osp.splitext(osp.basename(filepath))
     logger.debug(f"Parsed: {filename}, {ext}")
@@ -208,3 +200,7 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
             logger.exception(str(e))
 
         logger.info(f"Written {kwargs['job']} worklog to {path}")
+
+
+def send_email(sender=None, to=None, subject=None, files=None):
+    pass
