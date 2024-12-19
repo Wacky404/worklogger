@@ -646,3 +646,35 @@ PermissionError: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMP
 [DEBUG|funcs_worklogger|L172] 2024-10-17T16:52:45-0500: Job: uasys; Projects: {'GENERAL': 'anything'}
 [INFO|funcs_worklogger|L210] 2024-10-17T16:52:45-0500: Written uasys worklog to /Users/cole/Documents/GitHub/worklogger/Output
 [INFO|funcs_worklogger|L210] 2024-10-17T16:52:45-0500: Written uasys worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-11-28T20:45:40-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-11-28T20:45:40-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-11-28T20:45:40-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L101] 2024-11-28T20:45:40-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L41] 2024-11-28T20:45:40-0600: Parsed: GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L164] 2024-11-28T20:45:40-0600: Job: great company; Projects: {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}
+[INFO|funcs_worklogger|L202] 2024-11-28T20:45:40-0600: Written great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L202] 2024-11-28T20:45:40-0600: Written great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-11-28T20:48:55-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-11-28T20:48:55-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-11-28T20:48:55-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L101] 2024-11-28T20:48:55-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L41] 2024-11-28T20:48:55-0600: Parsed: GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L134] 2024-11-28T20:48:55-0600: Job: great company; Projects: {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}
+[INFO|funcs_worklogger|L202] 2024-11-28T20:48:55-0600: Written great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L202] 2024-11-28T20:48:55-0600: Written great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-11-28T20:50:36-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-11-28T20:50:36-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-11-28T20:50:36-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L101] 2024-11-28T20:50:36-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L41] 2024-11-28T20:50:36-0600: Parsed: GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L164] 2024-11-28T20:50:36-0600: Job: great company; Projects: {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}
+[INFO|funcs_worklogger|L202] 2024-11-28T20:50:36-0600: Written great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L202] 2024-11-28T20:50:36-0600: Written great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-11-28T20:50:51-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-11-28T20:50:51-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-11-28T20:50:51-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L101] 2024-11-28T20:50:51-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L41] 2024-11-28T20:50:51-0600: Parsed: GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L164] 2024-11-28T20:51:15-0600: Job: great company; Projects: {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}
+[INFO|funcs_worklogger|L202] 2024-11-28T20:51:15-0600: Written great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L202] 2024-11-28T20:51:15-0600: Written great company worklog to /Users/cole/Documents/worklogger

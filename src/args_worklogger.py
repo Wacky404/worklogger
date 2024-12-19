@@ -5,7 +5,6 @@ author: Wacky404
 email: wacky404@dev.com
 """
 
-from pathlib import Path
 import argparse
 
 parser = argparse.ArgumentParser(
@@ -13,11 +12,6 @@ parser = argparse.ArgumentParser(
     description="Log time efficiently, accurately, and reliably "
                 "directly from the terminal you work in.",
 )
-
-subparsers = parser.add_subparsers()
-
-parser_email = subparsers.add_parser(
-    'email', help='Send an email of your worklog(s)')
 
 parser.add_argument(
     '-c',
@@ -41,9 +35,10 @@ parser.add_argument(
 parser.add_argument(
     '-v',
     '--verbose',
-    action='store_false',
-    help='turn on/off the verboseness of the program when run',
+    action='store_true',
+    help='Turn on a verbose program when run',
 )
+
 
 parser.add_argument(
     'job',
@@ -94,12 +89,44 @@ parser.add_argument(
     help='Add a message to accompany your worklog entry'
 )
 
+subparsers = parser.add_subparsers(help='subcommand help')
+
+parser_merge = subparsers.add_parser(
+    'merge', help='Merge Records of a job and specified file extension'
+)
+
+# Merge Functionality
+parser_merge.add_argument(
+    '-ext',
+    '--extension',
+    action='store',
+    choices=['csv', 'text', 'json'],
+    default='csv',
+    help='(required) Output file type, as a result of merge'
+)
+
+parser_merge.add_argument(
+    '--exttarget',
+    action='store',
+    choices=['csv', 'text', 'json'],
+    help='Target a specific file type to merge into one file'
+)
+
+parser_merge.add_argument(
+    '--delete',
+    action='store_true',
+    help='Delete the old individual files that will get merged into one file'
+)
+
+parser_email = subparsers.add_parser(
+    'email', help='Send an email of your worklog(s)')
+
 # Email Functionality
 parser_email.add_argument(
     '-s',
     '--sender',
     action='store',
-    help='whom will be sending the email, if email is provided in config this flag does not need to be used'
+    help='Whom will be sending the email, if email is provided in config this flag does not need to be used'
 )
 
 parser_email.add_argument(
@@ -107,7 +134,7 @@ parser_email.add_argument(
     '--recipient',
     required=True,
     action='store',
-    help='whom will be recieving the email'
+    help='(required) Whom will be recieving the email'
 )
 
 parser_email.add_argument(
@@ -116,5 +143,5 @@ parser_email.add_argument(
     nargs='+',
     action='store',
     required=True,
-    help='path(s) to file or directory you want to email'
+    help='Path(s) to file or directory you want to email'
 )

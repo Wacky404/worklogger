@@ -1,4 +1,5 @@
 #!/opt/homebrew/bin/python3
+
 """
 IMPLEMENTATION FILE FOR WORKLOGGER
 author: Wacky404
@@ -45,7 +46,6 @@ def parse(filepath=None):
 
         return lines
     elif ext == '.csv':
-        # TODO: format returned list of str to what we are expecting; job:example loc:place
         lines = []
         with open(filepath, 'r') as fd:
             csv_reader = csv.DictReader(fd, delimiter=',')
@@ -200,6 +200,50 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
             logger.exception(str(e))
 
         logger.info(f"Written {kwargs['job']} worklog to {path}")
+
+
+def combine_log(specified_ext, target_job, target_extension=None, savepath=None, backuppath=None, delete=False):
+    # you pick a job then if you want you can choose a specific file type to target for combining into your specified_ext
+    # TODO: Finish function stopped just before date sorting; getting a data structure prepped for sorting then transformation
+    if target_job is None:
+        logger.info('You must specify a job to run combine_log()')
+        return None
+
+    for dir in (savepath, backuppath):
+        buffer = []
+        if osp.exists(dir):
+            target_extension = target_extension.strip('.')
+            # only thing affected by this blocks if statement
+            if target_extension is not None:
+                files = list(Path(dir).glob(
+                    f'**/{target_job.upper()}.{target_extension}'))
+            else:
+                files = list(Path(dir).glob(f'**/{target_job.upper()}'))
+            logger.debug(f"Found file(s): {files}")
+            if len(files) < 2:
+                logger.exception(
+                    f'combine_log() reqs 2 or more files. Found less than 2 of {target_job.upper()}.{target_extension}')
+                return None
+
+            for file in files:
+                buffer.append(*parse(file))
+
+            for index, line in enumerate(buffer):
+                buffer[index] = [index, line]
+
+            for content in buffer:
+                _entry = content[1].split(' ')
+                for param in _entry:
+                    param_split = param.split(':')
+                    var, val = param_split[0], param_split[1] if len(
+                        param_split) == 2 else None
+                    # need to sort datetimes ... actually easy
+                    if var == 'timestamp':
+                        buffer[content[0]].append(val)
+
+            buffer.sort(key=lambda x: datetime.strptime(
+                x[2], "%Y-%m-%dT%H:%M:%S%Z"))
+            pprint(buffer)
 
 
 def send_email(sender=None, to=None, subject=None, files=None):

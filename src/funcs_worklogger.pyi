@@ -6,23 +6,35 @@ email: wacky404@dev.com
 
 from argparse import Namespace
 from pathlib import Path
+from typing import Optional
 
 
-def configure(dir_list: list | None) -> None:
-    """
-    
-    """
-    ...
-
-
-def add_log(file_format: str | None, proj_settings: dict[str, dict] | None, savepath: Path | str, backuppath: Path | str, **kwargs) -> None:
+def configure(dir_list: Optional[list]) -> None:
     """
 
     """
     ...
 
 
-def parse(filepath: Path | str) -> list:
+def add_log(file_format: Optional[str], proj_settings: Optional[dict[str, dict]], savepath: Optional[Path], backuppath: Optional[Path], **kwargs) -> None:
+    # small bug in function that is missing an unchecked log start time
+    """
+
+    """
+    ...
+
+
+def combine_log(specified_ext: str, target_file: Path, target_extension: Optional[str],
+                savepath: Optional[Path], backuppath: Optional[Path], delete: bool = False, **kwargs) -> None:
+    """
+    Combine logs of different file types into one file of a specified type.
+
+    """
+    ...
+
+
+def parse(filepath: Optional[Path]) -> list:
+    # add json parsing, eventually
     """
 
     """
