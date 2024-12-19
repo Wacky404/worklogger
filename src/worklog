@@ -13,7 +13,7 @@ import os
 import os.path as osp
 import logging
 import paths_util_worklogger as pu
-from funcs_worklogger import configure, add_log
+from funcs_worklogger import configure, add_log, combine_log
 from args_worklogger import parser
 from pathlib import Path
 from log_util_worklogger import logger, setup_logging
@@ -33,13 +33,6 @@ formats: dict = {
 
 # creates a NameSpace of arguments that were made
 args = parser.parse_args()
-pprint(args)
-sys.exit()
-
-if args.configure:
-    configure(dir_list=None)
-    logger.info("Configuration completed.")
-    sys.exit()
 
 numeric_loglevel = getattr(logging, str(args.log).upper())
 if isinstance(numeric_loglevel, int):
@@ -88,6 +81,12 @@ if settings is not None:
 else:
     SAVEPATH = Path(osp.join(osp.expanduser("~"), "Documents"))
     BACKUPPATH = Path(osp.join(osp.expanduser("~"), "Documents", "worklogger"))
+
+
+if args.extension:
+    combine_log(target_job=args.job, specified_ext=args.extension,
+                delete=args.delete, savepath=SAVEPATH, backuppath=BACKUPPATH)
+    sys.exit()
 
 
 jname_proj: dict[str, dict] = {}
@@ -145,8 +144,8 @@ try:
 except Exception as e:
     logger.exception(str(e))
 
-if settings is not None:
 
+if settings is not None:
     add_log(file_format=formats[str(
         settings['fileformat']).upper()], proj_settings=jname_proj, savepath=SAVEPATH, backuppath=BACKUPPATH, job=args.job, proj=args.project,
         loc=args.location, time=args.time, start=args.start, end=args.end, message=args.message)

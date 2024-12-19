@@ -5,7 +5,18 @@ author: Wacky404
 email: wacky404@dev.com
 """
 
+from funcs_worklogger import configure
 import argparse
+
+
+class action_configure(argparse.Action):
+    def __init__(self, option_strings, dest, **kwargs):
+        return super().__init__(option_strings, dest, nargs=0, default=argparse.SUPPRESS, **kwargs)
+
+    def __call__(self, parser, namespace, values, option_strings, **kwargs):
+        configure(dir_list=None)
+        parser.exit()
+
 
 parser = argparse.ArgumentParser(
     prog='WorkLogger',
@@ -16,8 +27,8 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     '-c',
     '--configure',
-    action='store_true',
-    help='check/create directories that will be used in WorkLogger',
+    action=action_configure,
+    help='check/create, log & output, directories that will be used in WorkLogger',
 )
 
 parser.add_argument(
@@ -43,7 +54,7 @@ parser.add_argument(
 parser.add_argument(
     'job',
     action='store',
-    help='Add a job for the work done, to be logged with your insertion',
+    help='(required) Add a job for the work done, to be logged with your insertion',
 )
 
 parser.add_argument(
@@ -92,13 +103,13 @@ parser.add_argument(
 subparsers = parser.add_subparsers(help='subcommand help')
 
 parser_merge = subparsers.add_parser(
-    'merge', help='Merge Records of a job and specified file extension'
+    'merge',
+    help='Merge Records of a job and specified file extension'
 )
 
 # Merge Functionality
 parser_merge.add_argument(
-    '-ext',
-    '--extension',
+    'extension',
     action='store',
     choices=['csv', 'text', 'json'],
     default='csv',
@@ -106,15 +117,9 @@ parser_merge.add_argument(
 )
 
 parser_merge.add_argument(
-    '--exttarget',
-    action='store',
-    choices=['csv', 'text', 'json'],
-    help='Target a specific file type to merge into one file'
-)
-
-parser_merge.add_argument(
     '--delete',
     action='store_true',
+    default=False,
     help='Delete the old individual files that will get merged into one file'
 )
 

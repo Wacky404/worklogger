@@ -24,8 +24,7 @@ def add_log(file_format: Optional[str], proj_settings: Optional[dict[str, dict]]
     ...
 
 
-def combine_log(specified_ext: str, target_file: Path, target_extension: Optional[str],
-                savepath: Optional[Path], backuppath: Optional[Path], delete: bool = False, **kwargs) -> None:
+def combine_log(target_job: str, specified_ext: str, savepath: Optional[Path], backuppath: Optional[Path], delete: bool = False, **kwargs) -> None:
     """
     Combine logs of different file types into one file of a specified type.
 

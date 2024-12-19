@@ -8,9 +8,9 @@ email: wacky404@dev.com
 
 from pprint import pprint
 from log_util_worklogger import logger
-from datetime import timezone
+from datetime import timezone, datetime
+from pathlib import Path
 import csv
-import datetime
 import os
 import os.path as osp
 import paths_util_worklogger as pu
@@ -21,20 +21,17 @@ def configure(dir_list=None):
         for directory in dir_list:
             try:
                 os.makedirs(name=directory, exist_ok=True)
-                logger.debug(f"Directory {directory} created")
-
             except FileExistsError as e:
-                logger.exception(f"An exception of type {type(e).__name__} occurred. "
-                                 f"Details: This is okay, output will save in existing {directory}.")
+                print(f"An exception of type {type(e).__name__} occurred. "
+                      f"Details: This is okay, output will save in existing {directory}.")
+
     else:
         for directory in [pu.output_dir, pu.log_dir]:
             try:
                 os.makedirs(name=directory, exist_ok=True)
-                logger.debug(f"Directory {directory} created")
-
             except FileExistsError as e:
-                logger.exception(f"An exception of type {type(e).__name__} occurred. "
-                                 f"Details: This is okay, output will save in existing {directory}.")
+                print(f"An exception of type {type(e).__name__} occurred. "
+                      f"Details: This is okay, output will save in existing {directory}.")
 
 
 def parse(filepath=None):
@@ -202,48 +199,39 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
         logger.info(f"Written {kwargs['job']} worklog to {path}")
 
 
-def combine_log(specified_ext, target_job, target_extension=None, savepath=None, backuppath=None, delete=False):
-    # you pick a job then if you want you can choose a specific file type to target for combining into your specified_ext
-    # TODO: Finish function stopped just before date sorting; getting a data structure prepped for sorting then transformation
+def combine_log(target_job, specified_ext, target_extension=None, savepath=None, backuppath=None, delete=False):
     if target_job is None:
         logger.info('You must specify a job to run combine_log()')
         return None
 
-    for dir in (savepath, backuppath):
-        buffer = []
-        if osp.exists(dir):
-            target_extension = target_extension.strip('.')
-            # only thing affected by this blocks if statement
-            if target_extension is not None:
-                files = list(Path(dir).glob(
-                    f'**/{target_job.upper()}.{target_extension}'))
-            else:
-                files = list(Path(dir).glob(f'**/{target_job.upper()}'))
-            logger.debug(f"Found file(s): {files}")
-            if len(files) < 2:
-                logger.exception(
-                    f'combine_log() reqs 2 or more files. Found less than 2 of {target_job.upper()}.{target_extension}')
-                return None
+    buffer = []
+    # changed this from iterating over both dirs; thinking of limiting to one
+    if osp.exists(savepath):
+        files = list(Path(savepath).glob(f'**/{target_job.upper()}.**'))
+        logger.debug(f"Found file(s): {files}")
+        if len(files) < 2:
+            logger.exception(
+                f'combine_log() reqs 2 or more files. Found less than 2 of {target_job.upper()}.*')
+            return None
 
-            for file in files:
-                buffer.append(*parse(file))
+        for file in files:
+            buffer.extend(parse(file))
 
-            for index, line in enumerate(buffer):
-                buffer[index] = [index, line]
+        for index, line in enumerate(buffer):
+            buffer[index] = [index, line]
 
-            for content in buffer:
-                _entry = content[1].split(' ')
-                for param in _entry:
-                    param_split = param.split(':')
-                    var, val = param_split[0], param_split[1] if len(
-                        param_split) == 2 else None
-                    # need to sort datetimes ... actually easy
-                    if var == 'timestamp':
-                        buffer[content[0]].append(val)
+        for content in buffer:
+            _entry = content[1].split(' ')
+            buffer[content[0]].append(_entry[0])
 
+        # TODO: Finished sorting logs, now just need to write to target file and delete if needed.
+        try:
             buffer.sort(key=lambda x: datetime.strptime(
                 x[2], "%Y-%m-%dT%H:%M:%S%Z"))
-            pprint(buffer)
+        except ValueError as e:
+            logger.exception(f"An exception of type {type(e).__name__} occurred. "
+                             f"Details: {str(e)}")
+            return None
 
 
 def send_email(sender=None, to=None, subject=None, files=None):
