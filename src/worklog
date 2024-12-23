@@ -5,8 +5,6 @@ author: Wacky404
 email: wacky404@dev.com
 """
 
-import datetime
-from datetime import timezone
 import json
 import sys
 import os
@@ -83,9 +81,9 @@ else:
     BACKUPPATH = Path(osp.join(osp.expanduser("~"), "Documents", "worklogger"))
 
 
-if args.extension:
-    combine_log(target_job=args.job, specified_ext=args.extension,
-                delete=args.delete, savepath=SAVEPATH, backuppath=BACKUPPATH)
+if args.extension is not None:
+    combine_log(target_job=args.job, specified_ext=formats[str(args.extension).upper(
+    )], delete=args.delete, savepath=SAVEPATH, backuppath=BACKUPPATH)
     sys.exit()
 
 

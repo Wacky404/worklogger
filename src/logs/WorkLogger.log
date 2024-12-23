@@ -678,3 +678,170 @@ PermissionError: [Errno 13] Permission denied: '/Users/cole/../NOT SO GREAT COMP
 [DEBUG|funcs_worklogger|L164] 2024-11-28T20:51:15-0600: Job: great company; Projects: {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}
 [INFO|funcs_worklogger|L202] 2024-11-28T20:51:15-0600: Written great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
 [INFO|funcs_worklogger|L202] 2024-11-28T20:51:15-0600: Written great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L48] 2024-12-18T22:58:50-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-18T22:58:50-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L90] 2024-12-18T22:58:50-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L99] 2024-12-18T22:58:50-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L45] 2024-12-18T22:58:50-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L167] 2024-12-18T22:58:50-0600: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L205] 2024-12-18T22:58:50-0600: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L205] 2024-12-18T22:58:50-0600: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L48] 2024-12-18T22:59:59-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-18T22:59:59-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L90] 2024-12-18T22:59:59-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L99] 2024-12-18T22:59:59-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L45] 2024-12-18T22:59:59-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|funcs_worklogger|L167] 2024-12-18T23:01:00-0600: Job: not so great company; Projects: {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}
+[INFO|funcs_worklogger|L205] 2024-12-18T23:01:00-0600: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L205] 2024-12-18T23:01:00-0600: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L48] 2024-12-18T23:34:09-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-18T23:34:09-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L90] 2024-12-18T23:34:09-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L99] 2024-12-18T23:34:09-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L39] 2024-12-18T23:34:09-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L199] 2024-12-18T23:34:23-0600: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L199] 2024-12-18T23:34:23-0600: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L50] 2024-12-18T23:36:28-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L56] 2024-12-18T23:36:28-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L92] 2024-12-18T23:36:28-0600: {'GREAT COMPANY': {'proj 1': 'null', 'proj 2': '0987654321', 'proj 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'codename: secrete': '404', 'govwork': '902753203', 'exemplary': '9023hdalw903'}, 'UASYS': {'General': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'Interconnection': 'InterConnection Queue'}, 'EPRI': {'GridFast': '12345', 'Exemplar': '12345'}}
+[DEBUG|worklog|L101] 2024-12-18T23:36:28-0600: {'GREAT COMPANY': {'PROJ 1': 'null', 'PROJ 2': '0987654321', 'PROJ 3': '1234567890'}, 'NOT SO GREAT COMPANY': {'CODENAME: SECRETE': '404', 'GOVWORK': '902753203', 'EXEMPLARY': '9023hdalw903'}, 'UASYS': {'GENERAL': 'anything', 'EI': 'Educational Institution'}, 'PACES': {'INTERCONNECTION': 'InterConnection Queue'}, 'EPRI': {'GRIDFAST': '12345', 'EXEMPLAR': '12345'}}
+[DEBUG|funcs_worklogger|L39] 2024-12-18T23:36:28-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L199] 2024-12-18T23:36:28-0600: Written not so great company worklog to /Users/cole/Documents/GitHub/worklogger/Output
+[INFO|funcs_worklogger|L199] 2024-12-18T23:36:28-0600: Written not so great company worklog to /Users/cole/Documents/worklogger
+[DEBUG|worklog|L48] 2024-12-19T00:04:50-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:04:50-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L48] 2024-12-19T00:06:17-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:06:17-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L212] 2024-12-19T00:06:17-0600: Found file(s): []
+[ERROR|funcs_worklogger|L214] 2024-12-19T00:06:17-0600: combine_log() reqs 2 or more files. Found less than 2 of NOT SO GREAT COMPANY.*
+NoneType: None
+[DEBUG|worklog|L48] 2024-12-19T00:07:26-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:07:26-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L212] 2024-12-19T00:07:26-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L40] 2024-12-19T00:07:26-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|worklog|L48] 2024-12-19T00:16:57-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:16:57-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L212] 2024-12-19T00:16:57-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L40] 2024-12-19T00:16:57-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L40] 2024-12-19T00:16:57-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:20:56-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:20:56-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:20:56-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:20:56-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:20:56-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:25:10-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:25:10-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:25:10-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:25:10-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:25:10-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:32:00-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:32:00-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L48] 2024-12-19T00:33:07-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:33:07-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L48] 2024-12-19T00:33:51-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:33:51-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:33:51-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:33:51-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:33:51-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:34:40-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:34:40-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:34:40-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:34:40-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:34:40-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:36:10-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:36:10-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:36:10-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:36:10-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:36:10-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:41:49-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:41:49-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:41:49-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:41:49-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:41:49-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:49:39-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:49:39-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:49:39-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:49:39-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:49:39-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[ERROR|funcs_worklogger|L232] 2024-12-19T00:49:39-0600: An exception of type ValueError occurred. Details: time data 'not' does not match format '%Y-%m-%dT%H:%M:%S%Z'
+Traceback (most recent call last):
+  File "/Users/cole/Documents/GitHub/worklogger/src/funcs_worklogger.py", line 229, in combine_log
+    buffer.sort(key=lambda x: datetime.strptime(
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        x[2], "%Y-%m-%dT%H:%M:%S%Z"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cole/Documents/GitHub/worklogger/src/funcs_worklogger.py", line 229, in <lambda>
+    buffer.sort(key=lambda x: datetime.strptime(
+                              ~~~~~~~~~~~~~~~~~^
+        x[2], "%Y-%m-%dT%H:%M:%S%Z"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py", line 676, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py", line 455, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data 'not' does not match format '%Y-%m-%dT%H:%M:%S%Z'
+[DEBUG|worklog|L48] 2024-12-19T00:52:06-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:52:06-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:52:06-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:52:06-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:52:06-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L48] 2024-12-19T00:53:39-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L54] 2024-12-19T00:53:39-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L211] 2024-12-19T00:53:39-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:53:39-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L39] 2024-12-19T00:53:39-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T02:30:16-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T02:30:16-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L240] 2024-12-22T02:30:16-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L144] 2024-12-22T02:30:16-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L144] 2024-12-22T02:30:16-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T03:09:04-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T03:09:04-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L240] 2024-12-22T03:09:04-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L144] 2024-12-22T03:09:04-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L144] 2024-12-22T03:09:04-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T15:16:33-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T15:16:33-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L47] 2024-12-22T22:42:03-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:42:03-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|worklog|L47] 2024-12-22T22:42:36-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:42:36-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T22:42:36-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:42:36-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:42:36-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T22:44:33-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:44:33-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T22:44:33-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:44:33-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:44:33-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T22:48:27-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:48:27-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T22:48:27-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:48:27-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:48:27-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[DEBUG|worklog|L47] 2024-12-22T22:50:48-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:50:48-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T22:50:48-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:50:48-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:50:48-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L114] 2024-12-22T22:50:48-0600: Written NOT SO GREAT COMPANY worklog(s) to /Users/cole/Documents/GitHub/worklogger/Output
+[DEBUG|worklog|L47] 2024-12-22T22:59:05-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T22:59:05-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T22:59:05-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:59:05-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T22:59:05-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L114] 2024-12-22T22:59:05-0600: Written NOT SO GREAT COMPANY worklog(s) to /Users/cole/Documents/GitHub/worklogger/Output
+[DEBUG|worklog|L47] 2024-12-22T23:05:26-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T23:05:26-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T23:05:26-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T23:05:26-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T23:05:26-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L114] 2024-12-22T23:05:26-0600: Written NOT SO GREAT COMPANY worklog(s) to /Users/cole/Documents/GitHub/worklogger/Output
+[DEBUG|worklog|L47] 2024-12-22T23:48:14-0600: Found dotfile(s): [PosixPath('/Users/cole/.config/.workloggerconfig.json')]
+[DEBUG|worklog|L53] 2024-12-22T23:48:14-0600: Using user config file in /Users/cole/.config/.workloggerconfig.json
+[DEBUG|funcs_worklogger|L234] 2024-12-22T23:48:14-0600: Found file(s): [PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.txt'), PosixPath('/Users/cole/Documents/GitHub/worklogger/Output/NOT SO GREAT COMPANY.csv')]
+[DEBUG|funcs_worklogger|L137] 2024-12-22T23:48:14-0600: Parsed: NOT SO GREAT COMPANY, .txt
+[DEBUG|funcs_worklogger|L137] 2024-12-22T23:48:14-0600: Parsed: NOT SO GREAT COMPANY, .csv
+[INFO|funcs_worklogger|L114] 2024-12-22T23:48:14-0600: Written NOT SO GREAT COMPANY worklog(s) to /Users/cole/Documents/GitHub/worklogger/Output

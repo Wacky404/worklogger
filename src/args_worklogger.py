@@ -25,14 +25,12 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument(
-    '-c',
     '--configure',
     action=action_configure,
     help='check/create, log & output, directories that will be used in WorkLogger',
 )
 
 parser.add_argument(
-    '-l',
     '--log',
     action='store',
     default='INFO',  # NOTSET=0, DEBUG=10, INFO=20, WARNING=30, ERROR=40, CRITICAL=50
@@ -44,7 +42,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '-v',
     '--verbose',
     action='store_true',
     help='Turn on a verbose program when run',
