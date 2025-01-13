@@ -31,8 +31,6 @@ formats: dict = {
 
 # creates a NameSpace of arguments that were made
 args = parser.parse_args()
-print(type(args))
-pprint(args)
 
 numeric_loglevel = getattr(logging, str(args.log).upper())
 if isinstance(numeric_loglevel, int):

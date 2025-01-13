@@ -6,9 +6,9 @@ email: wacky404@dev.com
 """
 
 import logging.config
+import atexit
 
 
-# TODO: can't configure queue_handler easily as of 3.11 python only available on 3.12
 logger = logging.getLogger("WorkLogger")
 
 
@@ -40,15 +40,26 @@ def setup_logging(log_lvl_stdout='WARNING') -> None:
                 "maxBytes": 5000000,  # 5 mb
                 "backupCount": 5,
             },
+            "queue_handler": {
+                "class": "logging.handlers.QueueHandler",
+                "handlers": [
+                    "stdout",
+                    "file"
+                ],
+                "respect_handler_level": True
+            }
         },
         "loggers": {
             "root": {
                 "level": "DEBUG",
                 "handlers": [
-                    "stdout",
-                    "file",
+                    "queue_handler"
                 ],
             },
         },
     }
     logging.config.dictConfig(logging_config)
+    queue_handler = logging.getHandlerByName("queue_handler")
+    if queue_handler is not None:
+        queue_handler.listener.start()
+        atexit.register(queue_handler.listener.stop)

@@ -220,7 +220,7 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                 break
 
     log_str, cp_kwargs, field_names = _prep_write(format=file_format, s_log=log_str,
-                                                  p_settings=proj_settings, _dt=dt)
+                                                  p_settings=proj_settings, _dt=dt, k_args=kwargs)
     _write_file(p_save=savepath, p_backup=backuppath, format=file_format, j_upper=job_upper, len_file=len(parsed_file),
                 _cp_kwargs=[cp_kwargs], _log_str=[log_str], _field_names=field_names)
 
