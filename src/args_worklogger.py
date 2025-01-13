@@ -47,11 +47,17 @@ parser.add_argument(
     help='Turn on a verbose program when run',
 )
 
+parser.add_argument(
+    '--version',
+    action='version',
+    version='%(prog)s 1.0'
+)
+
 
 parser.add_argument(
     'job',
     action='store',
-    help='(required) Add a job for the work done, to be logged with your insertion',
+    help='(required)Add a job for the work done, to be logged with your insertion, merged, or emailed',
 )
 
 parser.add_argument(
@@ -109,8 +115,7 @@ parser_merge.add_argument(
     'extension',
     action='store',
     choices=['csv', 'text', 'json'],
-    default='csv',
-    help='(required) Output file type, as a result of merge'
+    help='(Required)Output file type, as a result of merge. Default is csv'
 )
 
 parser_merge.add_argument(

@@ -15,7 +15,7 @@ import csv
 import os
 
 
-TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%z"
+TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%Z"
 
 
 def _prep_write(format, s_log, p_settings, _dt, k_args):
@@ -23,31 +23,31 @@ def _prep_write(format, s_log, p_settings, _dt, k_args):
     if format == '.txt' or format == None:
         for key, val in k_args.items():
             if key == 'job' and val is not None:
-                s_log += f"{key}:'{val}'"
+                s_log += f"{key}:{val},"
             elif key == 'time' and val is not None:
-                s_log += f"{key}:{val}hrs "
+                s_log += f"{key}:{val}hrs,"
             elif key == 'message' and val is not None:
-                s_log += f"{'desc'}:'{val}' "
+                s_log += f"{'desc'}:'{val}',"
             elif key == 'proj' and val is not None and p_settings is not None:
                 job_projects = p_settings[str(k_args['job']).upper()]
                 if str(val).upper() in job_projects.keys():
-                    s_log += f"{key}:{job_projects[str(val).upper()]} "
+                    s_log += f"{key}:{job_projects[str(val).upper()]},"
                     logger.debug(
                         f"Job: {k_args['job']}; Projects: {job_projects}")
                 else:
-                    s_log += f"{key}:{val} "
+                    s_log += f"{key}:{val},"
                     logger.debug(
                         f"Couldn't get specified projects for {k_args['job']} in config.")
             elif key == 'start' and val == 'now':
-                s_log += f"{key}:{dt.strftime("'%H:%M'")} "
+                s_log += f"{key}:{dt.strftime("'%H:%M'")},"
             elif key == 'start' and val is not None:
-                s_log += f"{key}:'{val}' "
+                s_log += f"{key}:'{val}',"
             elif key == 'end' and val == 'now':
-                s_log += f"{key}:{dt.strftime("'%H:%M'")} "
+                s_log += f"{key}:{dt.strftime("'%H:%M'")},"
             elif key == 'end' and val is not None:
-                s_log += f"{key}:'{val}' "
+                s_log += f"{key}:'{val}',"
             elif val is not None:
-                s_log += f"{key}:{val} "
+                s_log += f"{key}:{val},"
 
         return s_log, None, None
 
@@ -151,11 +151,11 @@ def parse(filepath):
                 csv_log = ''
                 for key, val in row.items():
                     if key == 'timestamp':
-                        csv_log += f"{val} "
+                        csv_log += f"{val},"
                     elif key == 'job':
-                        csv_log += f"{key}:'{val}' "
+                        csv_log += f"{key}:{val},"
                     elif val:
-                        csv_log += f"{key}:{val} "
+                        csv_log += f"{key}:{val},"
 
                 lines.append(csv_log)
 
@@ -166,8 +166,8 @@ def parse(filepath):
 
 
 def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None, **kwargs):
-    dt = datetime.datetime.now(timezone.utc)
-    log_str = f"{dt.strftime(TIME_FORMAT)} "
+    dt = datetime.now(timezone.utc)
+    log_str = f"{dt.strftime(TIME_FORMAT)},"
     job_upper = str(kwargs['job']).upper()
 
     if file_format != None:
@@ -179,7 +179,7 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
     flag_start = False
     flag_end = False
     if len(parsed_file) > 1:
-        last_entry = str(parsed_file[-1]).split(' ')
+        last_entry = str(parsed_file[-1]).split(',')
         for param in last_entry:
             param_split = param.split(':')
             var, val = param_split[0], param_split[1] if len(
@@ -201,10 +201,10 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                     if file_format == '.txt':
                         if insert_time.lower() == 'now':
                             fd.write(
-                                f"{log_str}job:{kwargs['job']} end:{dt.strftime("'%H:%M'")}\n")
+                                f"{log_str}job:{kwargs['job']},end:{dt.strftime("'%H:%M'")}\n")
                         else:
                             fd.write(
-                                f"{log_str}job:{kwargs['job']} end:{insert_time}\n")
+                                f"{log_str}job:{kwargs['job']},end:{insert_time}\n")
                     elif file_format == '.csv':
                         csv_writer = csv.DictWriter(
                             fd, fieldnames=['timestamp'] + [x if x != 'message' else 'desc' for x in kwargs.keys()])
@@ -247,7 +247,8 @@ def combine_log(target_job, specified_ext, target_extension=None, savepath=None,
             buffer[index] = [index, line]
 
         for content in buffer:
-            _entry = content[1].split(' ')
+            # putting dt stamp in list
+            _entry = content[1].split(',')
             buffer[content[0]].append(_entry[0])
 
         try:
@@ -258,11 +259,12 @@ def combine_log(target_job, specified_ext, target_extension=None, savepath=None,
                              f"Details: {str(e)}")
             return None
 
-        csv_logs = []
         if specified_ext == '.csv':
+            csv_logs = []
             for log in buffer:
+                # buffer contains index, log line, dt stamp
                 _log = {}
-                split_log = log[1].split(' ')
+                split_log = log[1].split(',')
                 for index, param in enumerate(split_log):
                     if index == 0:
                         _log['timestamp'] = param
