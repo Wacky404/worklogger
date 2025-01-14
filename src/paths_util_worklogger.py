@@ -1,8 +1,7 @@
 #!/opt/homebrew/bin/python3
 """
 FILEPATHS FILE FOR WORKLOGGER
-author: Wacky404
-email: wacky404@dev.com
+author: Wacky404 <wacky404@dev.com>
 """
 
 from pathlib import Path

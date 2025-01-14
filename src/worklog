@@ -1,8 +1,7 @@
 #!/opt/homebrew/bin/python3
 """
 MAIN FILE FOR WORKLOGGER
-author: Wacky404
-email: wacky404@dev.com
+author: Wacky404 <wacky404@dev.com>
 """
 
 import json
@@ -16,8 +15,6 @@ from args_worklogger import parser
 from pathlib import Path
 from log_util_worklogger import logger, setup_logging
 from typing import Optional
-
-from pprint import pprint
 
 
 SAVEPATH: Path | str
@@ -40,6 +37,7 @@ else:
 
 
 dotfile: list | None = None
+# this will change once this moves to another directory; depends on install path
 if osp.exists(osp.join(os.getcwd(), os.pardir)):
     dotfile = list(Path(osp.join(osp.expanduser('~'), ".config")).glob(
         '**/*.workloggerconfig.json'))
@@ -62,16 +60,19 @@ if dotfile is not None:
             settings = json.load(fd)
         except Exception as e:
             logger.exception(str(e))
-            if args.verbose:
-                print("There was an error loading your config.")
-                print("Using defaults")
+            logger.error(
+                "There was an error loading your config. Using defaults.")
 
 if settings is not None:
     SAVEPATH = Path(osp.join(osp.expanduser("~"), settings['savepath']))
     BACKUPPATH = Path(osp.join(osp.expanduser("~"), settings['backuppath']))
-    numeric_loglevel_settings = getattr(
-        logging, str(settings['loglvl']).upper())
-    setup_logging(numeric_loglevel_settings)
+    try:
+        numeric_loglevel_settings = getattr(
+            logging, str(settings['loglvl']).upper())
+        setup_logging(numeric_loglevel_settings)
+    except Exception as e:
+        logger.exception(str(e))
+
     dir_list: list = [d for d in [
         SAVEPATH, BACKUPPATH] if not osp.exists(d)]
     if len(dir_list) > 0:
@@ -107,12 +108,10 @@ if settings is not None:
             settings['fileformat']).upper()]}")
         filepath_backup = osp.join(BACKUPPATH, f"{str(args.job).upper()}{formats[str(
             settings['fileformat']).upper()]}")
-        if not osp.exists(filepath):
-            with open(filepath, 'x'):
-                pass
-        if not osp.exists(filepath):
-            with open(filepath_backup, 'x'):
-                pass
+        for _path in [filepath, filepath_backup]:
+            if not osp.exists(_path):
+                with open(_path, 'x'):
+                    pass
     except Exception as e:
         logger.exception(str(e))
 
@@ -120,27 +119,12 @@ else:
     try:
         filepath = osp.join(SAVEPATH, f"{str(args.job).upper()}.txt")
         filepath_backup = osp.join(BACKUPPATH, f"{str(args.job).upper()}.txt")
-        if not osp.exists(filepath):
-            with open(filepath, 'x'):
-                pass
-        if not osp.exists(filepath):
-            with open(filepath_backup, 'x'):
-                pass
+        for _path in [filepath, filepath_backup]:
+            if not osp.exists(_path):
+                with open(_path, 'x'):
+                    pass
     except Exception as e:
         logger.exception(str(e))
-
-try:
-    for name in jname_proj.keys():
-        filepath = osp.join(SAVEPATH, f"{name}.txt")
-        filepath_backup = osp.join(BACKUPPATH, f"{name}.txt")
-        if not osp.exists(filepath):
-            with open(filepath, 'x'):
-                pass
-        if not osp.exists(filepath_backup):
-            with open(filepath_backup, 'x'):
-                pass
-except Exception as e:
-    logger.exception(str(e))
 
 
 if settings is not None:

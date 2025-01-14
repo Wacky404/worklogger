@@ -2,8 +2,7 @@
 
 """
 IMPLEMENTATION FILE FOR WORKLOGGER
-author: Wacky404
-email: wacky404@dev.com
+author: Wacky404 <wacky404@dev.com>
 """
 
 from log_util_worklogger import logger
@@ -11,11 +10,14 @@ from datetime import timezone, datetime
 from pathlib import Path
 import paths_util_worklogger as pu
 import os.path as osp
+import json
 import csv
 import os
+import sys
 
 
 TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%Z"
+FIELDS = ["timestamp", "job", "proj", "loc", "time", "start", "end", "desc"]
 
 
 def _prep_write(format, s_log, p_settings, _dt, k_args):
@@ -159,10 +161,23 @@ def parse(filepath):
 
                 lines.append(csv_log)
 
-            return lines
-    # TODO: Make the parser for json, once I figure out json structure
+        return lines
     elif ext == '.json':
-        pass
+        lines = []
+        with open(filepath, 'r') as fd:
+            _lines = fd.readlines()
+            for l in _lines:
+                line_str = ''
+                line = json.loads(l)
+                print(type(line))
+                print(line.keys())
+                for col in FIELDS:
+                    if col in line.keys():
+                        line_str += f"{col}:{line[col]},"
+
+                lines.append(line_str)
+
+        return lines
 
 
 def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None, **kwargs):
@@ -226,13 +241,8 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
 
 
 def combine_log(target_job, specified_ext, target_extension=None, savepath=None, backuppath=None, delete=False):
-    if target_job is None:
-        logger.info('You must specify a job to run combine_log()')
-        return None
-
-    buffer = []
-    # changed this from iterating over both dirs; thinking of limiting to one
     if osp.exists(savepath):
+        buffer = []
         files = list(Path(savepath).glob(f'**/{target_job.upper()}.**'))
         logger.debug(f"Found file(s): {files}")
         if len(files) < 2:
@@ -259,12 +269,18 @@ def combine_log(target_job, specified_ext, target_extension=None, savepath=None,
                              f"Details: {str(e)}")
             return None
 
+        csv_logs = []
         if specified_ext == '.csv':
-            csv_logs = []
             for log in buffer:
                 # buffer contains index, log line, dt stamp
                 _log = {}
-                split_log = log[1].split(',')
+                _pos = str(log[1]).rfind("'")
+                if _pos != -1:
+                    split_log = log[1][:_pos + 1].split(',')
+                    split_log[-1] = split_log[-1] + logt[1][_pos:]
+                    print(split_log)
+                else:
+                    split_log = log[1].split(',')
                 for index, param in enumerate(split_log):
                     if index == 0:
                         _log['timestamp'] = param

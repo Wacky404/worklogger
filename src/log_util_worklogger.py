@@ -1,8 +1,7 @@
 #!/opt/homebrew/bin/python3
 """
 LOGGER SETUP FILE FOR WORKLOGGER
-author: Wacky404
-email: wacky404@dev.com
+author: Wacky404 <wacky404@dev.com>
 """
 
 import logging.config

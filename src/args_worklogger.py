@@ -1,8 +1,7 @@
 #!/opt/homebrew/bin/python3
 """
 ARGUMENTS FILE FOR WORKLOGGER
-author: Wacky404
-email: wacky404@dev.com
+author: Wacky404 <wacky404@dev.com>
 """
 
 from funcs_worklogger import configure
@@ -52,7 +51,6 @@ parser.add_argument(
     action='version',
     version='%(prog)s 1.0'
 )
-
 
 parser.add_argument(
     'job',
