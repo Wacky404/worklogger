@@ -114,8 +114,10 @@ def _write_file(p_save, p_backup, format, j_upper, len_file, _cp_kwargs, _log_st
                     with open(chosen_job, 'w') as fd:
                         json.dump(['job', _cp_kwargs], fd, indent=4)
                 elif format == '.json' and len_file >= 1:
-                    with open(chosen_job, 'a') as fd:
+                    with open(chosen_job, 'a+') as fd:
                         fd_data = json.load(fd)
+                        fd_data["job"].append(_cp_kwargs)
+                        fd.seek(0)
                         json.dump(fd_data, fd, indent=4)
                 else:
                     with open(chosen_job, 'a') as fd:
@@ -242,16 +244,14 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                     elif file_format == '.json':
                         fd_data = json.load(fd)
                         _deepkwargs = copy.deepcopy(kwargs)
-                        _deepkwargs['desc'] = _deepkwargs.pop(
-                            'message', None
-                        )
+                        _deepkwargs['desc'] = _deepkwargs.pop('message', None)
                         if insert_time.lower() == 'now':
                             _deepkwargs['end'] = insert_time
                         else:
                             continue
 
                         fd_data["job"].append(_deepkwargs)
-                        file.seek(0)
+                        fd.seek(0)
 
                         json.dump(fd_data, fd, indent=4)
 
