@@ -5,15 +5,16 @@ IMPLEMENTATION FILE FOR WORKLOGGER
 author: Wacky404 <wacky404@dev.com>
 """
 
-from log_util_worklogger import logger
+from src.utils.log_util_worklogger import logger
 from datetime import timezone, datetime
 from pathlib import Path
-import paths_util_worklogger as pu
+import src.utils.paths_util_worklogger as pu
 import os.path as osp
 import json
 import csv
 import os
 import sys
+import copy
 
 
 TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%Z"
@@ -53,7 +54,7 @@ def _prep_write(format, s_log, p_settings, _dt, k_args):
 
         return s_log, None, None
 
-    elif format == '.csv':
+    elif format == '.csv' or format == '.json':
         cp_kwargs = {
             'timestamp': f"{dt.strftime(TIME_FORMAT)}"
         }
@@ -109,6 +110,13 @@ def _write_file(p_save, p_backup, format, j_upper, len_file, _cp_kwargs, _log_st
                             fd, fieldnames=_field_names)
                         for _kwarg in _cp_kwargs:
                             csv_writer.writerow(_kwarg)
+                elif format == '.json' and len_file == 0 or len_file == None:
+                    with open(chosen_job, 'w') as fd:
+                        json.dump(['job', _cp_kwargs], fd, indent=4)
+                elif format == '.json' and len_file >= 1:
+                    with open(chosen_job, 'a') as fd:
+                        fd_data = json.load(fd)
+                        json.dump(fd_data, fd, indent=4)
                 else:
                     with open(chosen_job, 'a') as fd:
                         for _log in _log_str:
@@ -159,23 +167,24 @@ def parse(filepath):
                     elif val:
                         csv_log += f"{key}:{val},"
 
-                lines.append(csv_log)
+                lines.append(csv_log.rstrip())
 
         return lines
     elif ext == '.json':
         lines = []
         with open(filepath, 'r') as fd:
-            _lines = fd.readlines()
-            for l in _lines:
-                line_str = ''
-                line = json.loads(l)
-                print(type(line))
-                print(line.keys())
-                for col in FIELDS:
-                    if col in line.keys():
-                        line_str += f"{col}:{line[col]},"
+            fd_data = json.load(fd)
+            for json_ele in fd_data['job']:
+                json_log = ''
+                for key, val in json_ele.items():
+                    if key == 'timestamp':
+                        json_log += f"{val},"
+                    elif key == 'job':
+                        json_log += f"{key}:{val},"
+                    elif val:
+                        json_log += f"{key}:{val},"
 
-                lines.append(line_str)
+                lines.append(json_log.rstrip())
 
         return lines
 
@@ -212,7 +221,8 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                 "Do you want to add an end time for the last entry? (Y/n) ")
             if add_endtime == 'Y':
                 insert_time = input("End Time: ")
-                with open(chosen_job, 'a') as fd:
+                # worklog TEST -p Name -loc remote -s now -m "this is a test!"
+                with open(chosen_job, 'a+') as fd:
                     if file_format == '.txt':
                         if insert_time.lower() == 'now':
                             fd.write(
@@ -223,12 +233,28 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                     elif file_format == '.csv':
                         csv_writer = csv.DictWriter(
                             fd, fieldnames=['timestamp'] + [x if x != 'message' else 'desc' for x in kwargs.keys()])
-                        if insert_time == 'now':
+                        if insert_time.lower() == 'now':
                             csv_writer.writerow(
                                 {'timestamp': f"{dt.strftime(TIME_FORMAT)}", 'job': kwargs['job'], 'end': f"{dt.strftime("'%H:%M'")}"})
                         else:
                             csv_writer.writerow(
                                 {'timestamp': f"{dt.strftime(TIME_FORMAT)}", 'job': kwargs['job'], 'end': f"{insert_time}"})
+                    elif file_format == '.json':
+                        fd_data = json.load(fd)
+                        _deepkwargs = copy.deepcopy(kwargs)
+                        _deepkwargs['desc'] = _deepkwargs.pop(
+                            'message', None
+                        )
+                        if insert_time.lower() == 'now':
+                            _deepkwargs['end'] = insert_time
+                        else:
+                            continue
+
+                        fd_data["job"].append(_deepkwargs)
+                        file.seek(0)
+
+                        json.dump(fd_data, fd, indent=4)
+
                 break
 
             elif add_endtime == 'n':
@@ -269,8 +295,8 @@ def combine_log(target_job, specified_ext, target_extension=None, savepath=None,
                              f"Details: {str(e)}")
             return None
 
-        csv_logs = []
-        if specified_ext == '.csv':
+        csv_json_logs = []
+        if specified_ext == '.csv' or specified_ext == '.json':
             for log in buffer:
                 # buffer contains index, log line, dt stamp
                 _log = {}
@@ -292,10 +318,12 @@ def combine_log(target_job, specified_ext, target_extension=None, savepath=None,
                     if val is not None:
                         _log[var] = val
 
-                csv_logs.append(_log)
+                csv_json_logs.append(_log)
 
         _write_file(p_save=savepath, p_backup=None, format=specified_ext, j_upper=target_job.upper(),
-                    len_file=None, _cp_kwargs=csv_logs, _log_str=[x[1] for x in buffer],
+                    len_file=None, _cp_kwargs=csv_json_logs if csv_json_logs else [],
+                    _log_str=[x[1]
+                              for x in buffer] if specified_ext == '.txt' else [],
                     _field_names=['timestamp', 'job', 'proj', 'loc', 'time', 'start', 'end', 'desc'])
 
         if delete:

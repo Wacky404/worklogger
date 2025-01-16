@@ -4,7 +4,7 @@ ARGUMENTS FILE FOR WORKLOGGER
 author: Wacky404 <wacky404@dev.com>
 """
 
-from funcs_worklogger import configure
+from src.funcs_worklogger import configure
 import argparse
 
 
