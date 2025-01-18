@@ -1,5 +1,5 @@
 #!/opt/homebrew/bin/python3
-
+# Thinking of modifiying parse() to .replace() any , or protected chars and send it down then reconvert them later
 """
 IMPLEMENTATION FILE FOR WORKLOGGER
 author: Wacky404 <wacky404@dev.com>
@@ -60,7 +60,7 @@ def _prep_write(format, s_log, p_settings, _dt, k_args):
         }
         for key, val in k_args.items():
             if key == 'message':
-                cp_kwargs['desc'] = val
+                cp_kwargs['desc'] = f'"{val}"'
                 continue
             elif key == 'proj' and val is not None and p_settings is not None:
                 job_projects = p_settings[str(
@@ -79,6 +79,8 @@ def _prep_write(format, s_log, p_settings, _dt, k_args):
             elif key == 'end' and val == 'now':
                 cp_kwargs['end'] = f"{dt.strftime("'%H:%M'")}"
                 continue
+            elif key == 'job':
+                cp_kwargs['job'] = f'"{val}"'
 
             cp_kwargs[key] = val
 
