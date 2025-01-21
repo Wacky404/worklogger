@@ -9,11 +9,11 @@ import sys
 import os
 import os.path as osp
 import logging
-import src.utils.paths_util_worklogger as pu
-from src.funcs_worklogger import configure, add_log, combine_log
-from src.args_worklogger import parser
+import utils.paths_util_worklogger as pu
+from funcs_worklogger import configure, add_log, combine_log
+from args_worklogger import parser
 from pathlib import Path
-from src.util.log_util_worklogger import logger, setup_logging
+from utils.log_util_worklogger import logger, setup_logging
 from typing import Optional
 
 

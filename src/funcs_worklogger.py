@@ -5,10 +5,10 @@ IMPLEMENTATION FILE FOR WORKLOGGER
 author: Wacky404 <wacky404@dev.com>
 """
 
-from src.utils.log_util_worklogger import logger
+from utils.log_util_worklogger import logger
 from datetime import timezone, datetime
 from pathlib import Path
-import src.utils.paths_util_worklogger as pu
+import utils.paths_util_worklogger as pu
 import os.path as osp
 import json
 import csv
@@ -19,6 +19,10 @@ import copy
 
 TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%Z"
 FIELDS = ["timestamp", "job", "proj", "loc", "time", "start", "end", "desc"]
+
+
+def _empty(filepath):
+    return osp.getsize(filepath) == 0
 
 
 def _prep_write(format, s_log, p_settings, _dt, k_args):
@@ -114,13 +118,15 @@ def _write_file(p_save, p_backup, format, j_upper, len_file, _cp_kwargs, _log_st
                             csv_writer.writerow(_kwarg)
                 elif format == '.json' and len_file == 0 or len_file == None:
                     with open(chosen_job, 'w') as fd:
-                        json.dump(['job', _cp_kwargs], fd, indent=4)
+                        json.dump({'logs': _cp_kwargs}, fd, indent=4)
                 elif format == '.json' and len_file >= 1:
-                    with open(chosen_job, 'a+') as fd:
+                    with open(chosen_job, 'r+') as fd:
                         fd_data = json.load(fd)
-                        fd_data["job"].append(_cp_kwargs)
+                        for _kwarg in _cp_kwargs:
+                            fd_data["logs"].append(_kwarg)
                         fd.seek(0)
                         json.dump(fd_data, fd, indent=4)
+                        fd.truncate()
                 else:
                     with open(chosen_job, 'a') as fd:
                         for _log in _log_str:
@@ -176,9 +182,11 @@ def parse(filepath):
         return lines
     elif ext == '.json':
         lines = []
+        if _empty(filepath=filepath):
+            return lines
         with open(filepath, 'r') as fd:
             fd_data = json.load(fd)
-            for json_ele in fd_data['job']:
+            for json_ele in fd_data["logs"]:
                 json_log = ''
                 for key, val in json_ele.items():
                     if key == 'timestamp':
@@ -252,7 +260,7 @@ def add_log(file_format=None, proj_settings=None, savepath=None, backuppath=None
                         else:
                             continue
 
-                        fd_data["job"].append(_deepkwargs)
+                        fd_data["logs"].append(_deepkwargs)
                         fd.seek(0)
 
                         json.dump(fd_data, fd, indent=4)

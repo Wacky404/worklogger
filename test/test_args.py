@@ -9,7 +9,6 @@ import random
 import json
 
 
-# 2024-11-29T02:45:40UTC
 TIME_FORMAT = "%Y-%m-%dT%H:%M:%S%Z"
 FIELDS = ["timestamp", "job", "proj", "loc", "time", "start", "end", "desc"]
 
