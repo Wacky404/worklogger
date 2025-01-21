@@ -85,6 +85,7 @@ def _prep_write(format, s_log, p_settings, _dt, k_args):
                 continue
             elif key == 'job':
                 cp_kwargs['job'] = f'"{val}"'
+                continue
 
             cp_kwargs[key] = val
 
